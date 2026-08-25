@@ -1,0 +1,27 @@
+{
+  "accuracy": 0.949,
+  "macro_precision": 0.9512,
+  "macro_recall": 0.9483,
+  "macro_f1": 0.9491,
+  "weighted_precision": 0.9512,
+  "weighted_recall": 0.949,
+  "weighted_f1": 0.9494,
+  "train_samples": 8000,
+  "test_samples": 2000,
+  "classes": [
+    "Air Conditioning",
+    "Catering",
+    "Cleanliness",
+    "Coach Maintenance",
+    "Electrical",
+    "Luggage",
+    "Medical",
+    "Other",
+    "Pest Control",
+    "Security",
+    "Staff Behaviour",
+    "Station Facilities",
+    "Ticketing",
+    "Water Supply"
+  ]
+}

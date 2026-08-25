@@ -1,0 +1,41 @@
+# Byte-compiled / optimized files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Virtual environments
+venv/
+.venv/
+env/
+ENV/
+
+# Database files & Local DBs
+*.db
+*.db-journal
+*.db-shm
+*.db-wal
+*.sqlite
+*.sqlite3
+
+# ML Models & Datasets (large binary model weights)
+models/*.joblib
+models/*.pkl
+data/synthetic/*.json
+data/synthetic/*.csv
+
+# Environment variables & secrets
+.env
+.streamlit/secrets.toml
+
+# Streamlit local state
+.streamlit/*
+!.streamlit/config.toml
+
+# IDE & Editor files
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Pytest / Testing caches
+.pytest_cache/
