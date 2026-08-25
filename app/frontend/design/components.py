@@ -1,5 +1,5 @@
 import streamlit as st
-from app.frontend.design.theme import PRIORITY_COLORS, STATUS_COLORS, SLA_COLORS
+from design.theme import PRIORITY_COLORS, STATUS_COLORS, SLA_COLORS
 
 
 def render_page_header(title: str, subtitle: str, badge_status: str = "SYSTEM OPERATIONAL"):

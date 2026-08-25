@@ -1,9 +1,24 @@
 import sys
 import os
-sys.path.append(os.path.dirname(os.path.abspath(__file__)))
-sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
+
+# Standardize sys.path so 'design', 'app', and root packages resolve deterministically
+FRONTEND_DIR = os.path.dirname(os.path.abspath(__file__))
+APP_DIR = os.path.dirname(FRONTEND_DIR)
+PROJECT_DIR = os.path.dirname(APP_DIR)
+
+for path in [FRONTEND_DIR, APP_DIR, PROJECT_DIR]:
+    if path not in sys.path:
+        sys.path.insert(0, path)
 
 import streamlit as st
+
+st.set_page_config(
+    page_title="RailHelpAI — AI Railway Operations Platform",
+    page_icon="🚆",
+    layout="wide",
+    initial_sidebar_state="expanded"
+)
+
 from design.styles import inject_custom_css
 
 # Configure multipage app shell with st.navigation & st.Page
