@@ -45,14 +45,24 @@ Without automated triage and intelligent routing, critical safety or medical eme
 
 ```mermaid
 flowchart TD
-    A[Passenger Grievance\nText / Image / OCR] --> B[Multilingual Normalizer\nEnglish / Hinglish / Hindi]
-    B --> C[AI Classification & Entity Extractor\nCategory, Train, Coach, Seat, Station]
-    C --> D[Priority & Sentiment Engine\nP1 Critical to P4 Low]
-    D --> E[Human-in-the-Loop Threshold Evaluator\n>=85% Auto | 60-84% Review | <60% Manual]
-    E --> F[Department Router & SLA Engine\nTarget Deadlines & Escalation Alerts]
-    F --> G[Incident Intelligence & Vector Matching\nDBSCAN Clustering & Duplicate Detector]
-    G --> H[Multimodal Vision & OCR Fusion\nCross-Modal Conflict Detection]
-    H --> I[Executive Operations Dashboard\nRisk Index & Prescriptive Recommendations]
+    A["Passenger Grievance<br/>Text / Image / OCR"]
+    B["Multilingual Normalizer<br/>English / Hinglish / Hindi"]
+    C["AI Classification & Entity Extractor<br/>Category, Train, Coach, Seat, Station"]
+    D["Priority & Sentiment Engine<br/>P1 Critical to P4 Low"]
+    E["Human-in-the-Loop Threshold Evaluator<br/>85%+ Auto / 60-84% Review / Below 60% Manual"]
+    F["Department Router & SLA Engine<br/>Target Deadlines & Escalation Alerts"]
+    G["Incident Intelligence & Vector Matching<br/>DBSCAN Clustering & Duplicate Detector"]
+    H["Multimodal Vision & OCR Fusion<br/>Cross-Modal Conflict Detection"]
+    I["Executive Operations Dashboard<br/>Risk Index & Prescriptive Recommendations"]
+
+    A --> B
+    B --> C
+    C --> D
+    D --> E
+    E --> F
+    F --> G
+    G --> H
+    H --> I
 ```
 
 ---

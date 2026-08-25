@@ -17,6 +17,9 @@ ENV/
 *.sqlite
 *.sqlite3
 
+# Uploads & Temporary user files
+data/uploads/
+
 # ML Models & Datasets (large binary model weights)
 models/*.joblib
 models/*.pkl
