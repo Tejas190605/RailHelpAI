@@ -31,6 +31,17 @@ SHOWCASE_CAPURES = [
     {"name": "Executive Intelligence", "filename": "05_executive_intelligence.png"}
 ]
 
+EXCEPTION_SIGNATURES = [
+    "ImportError",
+    "ModuleNotFoundError",
+    "Traceback (most recent call last)",
+    "SyntaxError",
+    "NameError",
+    "AttributeError",
+    "StreamlitAPIException",
+    "StreamlitSetPageConfigMustBeFirstCommandError",
+]
+
 
 def run_verification_and_capture():
     with sync_playwright() as p:
@@ -55,10 +66,15 @@ def run_verification_and_capture():
                     page.click(f"text={p_name}")
                 time.sleep(2)
 
-                # Check for errors in page content
+                # Robust Exception Detection: DOM selector + specific exception signatures
+                exception_elements = page.locator(".stException, [data-testid='stException']")
+                has_dom_exception = exception_elements.count() > 0
+
                 content = page.content()
-                if "ImportError" in content or "Traceback (most recent call last)" in content or "SyntaxError" in content or "ModuleNotFoundError" in content:
-                    logger.error(f"  ❌ FAIL: {p_name} contains runtime error or traceback!")
+                has_text_exception = any(sig in content for sig in EXCEPTION_SIGNATURES)
+
+                if has_dom_exception or has_text_exception:
+                    logger.error(f"  ❌ FAIL: {p_name} contains runtime exception or traceback!")
                     failed_pages.append(p_name)
                 else:
                     logger.info(f"  ✅ PASS: {p_name} loaded cleanly with zero errors.")
@@ -87,7 +103,7 @@ def run_verification_and_capture():
                 page.click(f"text={p_name}")
             time.sleep(3)
 
-            # Special actions for AI Analysis to show populated state
+            # Special action for AI Analysis to populate live demo output
             if p_name == "AI Analysis":
                 try:
                     text_area = page.get_by_role("textbox")
