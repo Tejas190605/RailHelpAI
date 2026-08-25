@@ -85,8 +85,8 @@ class ComplaintClassifier:
 
     def _rule_based_fallback(self, text: str) -> Tuple[str, float]:
         """Simple rule-assisted keyword fallback."""
-        lower_t = text.lower()
-        if any(k in lower_t for k in ["ac", "air condition", "cooling", "chilling"]):
+        tokens = set(lower_t.split())
+        if "ac" in tokens or any(k in lower_t for k in ["air condition", "cooling", "chilling"]):
             return "Air Conditioning", 0.75
         if any(k in lower_t for k in ["dirty", "clean", "garbage", "toilet", "washbasin", "dustbin"]):
             return "Cleanliness", 0.75

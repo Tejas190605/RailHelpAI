@@ -84,19 +84,21 @@ def health_ready():
     except Exception:
         db_ok = False
 
-    models_ok = os.path.exists("models/complaint_classifier_v1.0.joblib")
+    base_dir = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+    model_path = os.path.join(base_dir, "models", "complaint_classifier_v1.0.joblib")
+    models_ok = os.path.exists(model_path) or os.path.exists("models/complaint_classifier_v1.0.joblib")
 
-    if db_ok and models_ok:
+    if db_ok:
         return {
             "status": "ready",
-            "components": {"database": "connected", "ml_models": "loaded"}
+            "components": {"database": "connected", "ml_models": "loaded" if models_ok else "fallback_active"}
         }
     else:
         return JSONResponse(
             status_code=status.HTTP_503_SERVICE_UNAVAILABLE,
             content={
                 "status": "not_ready",
-                "components": {"database": "ok" if db_ok else "failed", "ml_models": "ok" if models_ok else "missing"}
+                "components": {"database": "failed", "ml_models": "ok" if models_ok else "missing"}
             }
         )
 
