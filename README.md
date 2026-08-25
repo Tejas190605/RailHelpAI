@@ -152,7 +152,7 @@ Human operators can override category, priority, or department assignments. All 
 ## 📊 Empirical Results & Benchmarks
 
 ### Automated Test Suite
-- **pytest Test Suite:** **85 / 85 PASSED (100% Success)** ([docs/TESTING.md](docs/TESTING.md))
+- **pytest Test Suite:** **106 / 106 PASSED (100% Success)** ([docs/TESTING.md](docs/TESTING.md))
 
 ### Classifier Evaluation & Dataset Transparency
 RailHelpAI transparently documents both standard and zero-leakage evaluation metrics:
