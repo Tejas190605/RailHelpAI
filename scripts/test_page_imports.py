@@ -1,7 +1,6 @@
 import os
 import sys
-import traceback
-import importlib.util
+import runpy
 from pathlib import Path
 
 # Ensure sys.path matches app.py runtime environment
@@ -20,13 +19,10 @@ print(f"Testing {len(page_files)} page module imports...")
 success = True
 for page_file in page_files:
     try:
-        spec = importlib.util.spec_from_file_location(page_file.stem, str(page_file))
-        mod = importlib.util.module_from_spec(spec)
-        spec.loader.exec_module(mod)
+        runpy.run_path(str(page_file))
         print(f"  [PASS] {page_file.name}")
     except Exception as e:
         print(f"  [FAIL] {page_file.name}: {type(e).__name__}: {e}")
-        traceback.print_exc()
         success = False
 
 if not success:
