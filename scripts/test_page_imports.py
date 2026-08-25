@@ -1,28 +1,38 @@
 import os
 import sys
-import runpy
-from pathlib import Path
+import importlib
 
 # Ensure sys.path matches app.py runtime environment
-PROJECT_DIR = Path(__file__).resolve().parent.parent
-FRONTEND_DIR = PROJECT_DIR / "app" / "frontend"
-APP_DIR = PROJECT_DIR / "app"
+FRONTEND_DIR = os.path.abspath("app/frontend")
+APP_DIR = os.path.abspath("app")
+PROJECT_DIR = os.path.abspath(".")
 
-for p in [str(FRONTEND_DIR), str(APP_DIR), str(PROJECT_DIR)]:
+for p in [FRONTEND_DIR, APP_DIR, PROJECT_DIR]:
     if p not in sys.path:
         sys.path.insert(0, p)
 
-pages_dir = FRONTEND_DIR / "pages"
-page_files = sorted([f for f in pages_dir.glob("*.py") if not f.name.startswith("__")])
+pages = [
+    "pages.01_Overview",
+    "pages.02_Submit_Complaint",
+    "pages.03_AI_Analysis",
+    "pages.04_Complaint_Queue",
+    "pages.05_SLA_Monitor",
+    "pages.06_Human_Review_Queue",
+    "pages.07_Complaint_Detail",
+    "pages.08_Train_Intelligence",
+    "pages.09_Station_Intelligence",
+    "pages.10_Incident_Clusters",
+    "pages.11_Executive_Intelligence",
+]
 
-print(f"Testing {len(page_files)} page module imports...")
+print("Testing page module imports...")
 success = True
-for page_file in page_files:
+for page_module in pages:
     try:
-        runpy.run_path(str(page_file))
-        print(f"  [PASS] {page_file.name}")
+        mod = importlib.import_module(page_module)
+        print(f"  [PASS] {page_module}")
     except Exception as e:
-        print(f"  [FAIL] {page_file.name}: {type(e).__name__}: {e}")
+        print(f"  [FAIL] {page_module}: {type(e).__name__}: {e}")
         success = False
 
 if not success:
