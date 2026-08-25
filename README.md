@@ -1,10 +1,11 @@
 # 🚆 RailHelpAI — AI-Powered Railway Complaint Intelligence & Operations Platform
 
+[![RailHelpAI CI/CD Pipeline](https://github.com/Tejas190605/RailHelpAI/actions/workflows/ci.yml/badge.svg)](https://github.com/Tejas190605/RailHelpAI/actions/workflows/ci.yml)
 [![Python 3.10+](https://img.shields.io/badge/python-3.10%2B-blue.svg)](https://www.python.org/)
 [![FastAPI](https://img.shields.io/badge/FastAPI-0.109.0-009688.svg)](https://fastapi.tiangolo.com/)
 [![Streamlit](https://img.shields.io/badge/Streamlit-1.31.0-FF4B4B.svg)](https://streamlit.io/)
 [![scikit-learn](https://img.shields.io/badge/scikit--learn-1.4.0-F7931E.svg)](https://scikit-learn.org/)
-[![Tests Passing](https://img.shields.io/badge/tests-85%2F85%20passing-brightgreen.svg)](docs/TESTING.md)
+[![Tests Passing](https://img.shields.io/badge/tests-106%2F106%20passing-brightgreen.svg)](docs/TESTING.md)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
 
 An independent, production-inspired portfolio project that transforms raw railway passenger grievances into structured, actionable operational intelligence using NLP, machine learning, multimodal evidence analysis, workflow automation, and human-in-the-loop review.
@@ -283,10 +284,15 @@ Access Web App at **`http://127.0.0.1:8501`** and Swagger API docs at **`http://
 
 - [`docs/SETUP.md`](docs/SETUP.md) — Detailed setup instructions
 - [`docs/ARCHITECTURE.md`](docs/ARCHITECTURE.md) — Complete architecture specification
-- [`docs/SECURITY.md`](docs/SECURITY.md) — Security controls & guidelines
 - [`docs/TESTING.md`](docs/TESTING.md) — Automated test suite report
+- [`docs/API_TESTING.md`](docs/API_TESTING.md) — REST API testing & validation specification
+- [`docs/AI_PIPELINE_TESTING.md`](docs/AI_PIPELINE_TESTING.md) — AI/ML pipeline contract tests
+- [`docs/STREAMLIT_TESTING.md`](docs/STREAMLIT_TESTING.md) — Streamlit native AppTest testing guide
+- [`docs/CI.md`](docs/CI.md) — GitHub Actions CI/CD specification
+- [`docs/FINAL_RELEASE_VERIFICATION.md`](docs/FINAL_RELEASE_VERIFICATION.md) — Final release verification matrix
+- [`docs/SECURITY.md`](docs/SECURITY.md) — Security controls & guidelines
 - [`docs/LIMITATIONS.md`](docs/LIMITATIONS.md) — Transparent model limitations
 - [`docs/SECURITY_AUDIT.md`](docs/SECURITY_AUDIT.md) — Security scan findings
-- [`docs/PORTFOLIO_PROJECT_SUMMARY.md`](docs/PORTFOLIO_PROJECT_SUMMARY.md) — Resume bullets & technical stack
+- [`docs/PORTFOLIO_PROJECT_SUMMARY.md`](docs/PORTFOLIO_PROJECT_SUMMARY.md) — Portfolio project summary & tech stack
 - [`docs/SCREENSHOT_GUIDE.md`](docs/SCREENSHOT_GUIDE.md) — Screenshot capture guidelines & status
 - [`docs/FINAL_PROJECT_WALKTHROUGH.md`](docs/FINAL_PROJECT_WALKTHROUGH.md) — Complete walkthrough
