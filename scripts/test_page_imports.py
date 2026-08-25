@@ -1,5 +1,6 @@
 import os
 import sys
+import traceback
 import importlib.util
 from pathlib import Path
 
@@ -25,6 +26,7 @@ for page_file in page_files:
         print(f"  [PASS] {page_file.name}")
     except Exception as e:
         print(f"  [FAIL] {page_file.name}: {type(e).__name__}: {e}")
+        traceback.print_exc()
         success = False
 
 if not success:
