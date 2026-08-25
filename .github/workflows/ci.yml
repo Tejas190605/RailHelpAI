@@ -44,7 +44,10 @@ jobs:
       - name: Run Page Import Smoke Tests
         run: python scripts/test_page_imports.py
 
-      - name: Run Automated Pytest Suite
+      - name: Run Streamlit AppTest UI Suite
+        run: pytest tests/test_streamlit_app.py -v
+
+      - name: Run Complete Pytest Suite
         run: pytest tests/ -v
 
       - name: Verify Git Diff Whitespace Compliance
