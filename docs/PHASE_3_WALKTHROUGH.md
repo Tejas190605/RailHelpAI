@@ -14,11 +14,11 @@
 4. **Resolution & Feedback Workflow:** Endpoints (`POST /api/v1/complaints/{id}/resolve` and `POST /api/v1/complaints/{id}/feedback`) to mark complaints resolved with resolution notes, type, resolution duration, and passenger feedback rating (1–5).
 5. **Operational Analytics & Real KPIs (`app/services/analytics_service.py`):** Database-derived KPIs (Total, Open, Resolved, Critical, SLA Breaches, Avg Resolution Time, AI Automation Rate %, and SLA Compliance Rate %).
 6. **Streamlit UI Pages:**
-   - [01 Overview](file:///c:/Users/tejas/RailHelpAI/app/frontend/pages/01_Overview.py): Live database KPI metric cards and Plotly charts.
-   - [04 Complaint Queue](file:///c:/Users/tejas/RailHelpAI/app/frontend/pages/04_Complaint_Queue.py): Operator triage board with multi-column filtering and sorting.
-   - [05 SLA Monitor](file:///c:/Users/tejas/RailHelpAI/app/frontend/pages/05_SLA_Monitor.py): Real-time SLA tracker and demonstration policy matrix.
-   - [06 Human Review Queue](file:///c:/Users/tejas/RailHelpAI/app/frontend/pages/06_Human_Review_Queue.py): Human-in-the-loop review interface for moderate/low confidence predictions.
-   - [07 Complaint Detail](file:///c:/Users/tejas/RailHelpAI/app/frontend/pages/07_Complaint_Detail.py): Single complaint inspection view and resolution workstation.
+   - [01 Overview](../app/frontend/pages/01_Overview.py): Live database KPI metric cards and Plotly charts.
+   - [04 Complaint Queue](../app/frontend/pages/04_Complaint_Queue.py): Operator triage board with multi-column filtering and sorting.
+   - [05 SLA Monitor](../app/frontend/pages/05_SLA_Monitor.py): Real-time SLA tracker and demonstration policy matrix.
+   - [06 Human Review Queue](../app/frontend/pages/06_Human_Review_Queue.py): Human-in-the-loop review interface for moderate/low confidence predictions.
+   - [07 Complaint Detail](../app/frontend/pages/07_Complaint_Detail.py): Single complaint inspection view and resolution workstation.
 
 ---
 

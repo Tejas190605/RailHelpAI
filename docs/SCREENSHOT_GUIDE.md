@@ -30,3 +30,14 @@
    - **Screen:** Executive Intelligence Dashboard (`11_Executive_Intelligence.py`)
    - **Key Elements:** Operational Risk Index card, metric-backed prescriptive action recommendations, 7-day category trend chart.
    - **Dimensions:** 1440 × 900 PNG (131,780 bytes)
+
+---
+
+## 🖼️ GitHub Social Preview Configuration
+
+- **Recommended Asset:** `docs/screenshots/01_command_center.png`
+- **Resolution:** 1440 × 900 (High-DPI 16:9 ratio)
+- **Configuration Steps:**
+  1. Open GitHub repository settings (`https://github.com/Tejas190605/RailHelpAI/settings`).
+  2. Navigate to **General** $\rightarrow$ **Social preview**.
+  3. Click **Edit** $\rightarrow$ **Upload an image...** and select `01_command_center.png`.

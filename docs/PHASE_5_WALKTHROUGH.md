@@ -33,7 +33,7 @@
    - Multi-signal composite score: Volume (25%), Severity (30%), SLA Breach Rate (25%), and Incident Activity (20%). Clearly labeled as prototype analytical score.
 
 8. **Phase 5K & 5L — Executive Intelligence & Evidence Workstations:**
-   - Streamlit Page: [11_Executive_Intelligence.py](file:///c:/Users/tejas/RailHelpAI/app/frontend/pages/11_Executive_Intelligence.py).
+   - Streamlit Page: [11_Executive_Intelligence.py](../app/frontend/pages/11_Executive_Intelligence.py).
 
 ---
 

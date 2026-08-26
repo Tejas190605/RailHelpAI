@@ -34,14 +34,14 @@
 
 5. **Phase 4E — Train Intelligence (`app/services/train_service.py`):**
    - Analytical profiling per train (total, open, resolved, SLA compliance, top categories, worst coaches).
-   - Streamlit Page: [08_Train_Intelligence.py](file:///c:/Users/tejas/RailHelpAI/app/frontend/pages/08_Train_Intelligence.py).
+   - Streamlit Page: [08_Train_Intelligence.py](../app/frontend/pages/08_Train_Intelligence.py).
 
-6. **Phase 4F — Station Intelligence (`app/services/station_service.py`):**
-   - Analytical profiling per station (volume, top issues, peak hours, SLA compliance).
-   - Streamlit Page: [09_Station_Intelligence.py](file:///c:/Users/tejas/RailHelpAI/app/frontend/pages/09_Station_Intelligence.py).
+38. **Station Profiler Workstation:** Station search, health score, category breakdown, SLA compliance %, risk index, and recent station incidents.
+   - Endpoint: `GET /api/v1/analytics/stations/{station_name}/profile`.
+   - Streamlit Page: [09_Station_Intelligence.py](../app/frontend/pages/09_Station_Intelligence.py).
 
-7. **Phase 4G — Incident Clusters Workstation:**
-   - Streamlit Page: [10_Incident_Clusters.py](file:///c:/Users/tejas/RailHelpAI/app/frontend/pages/10_Incident_Clusters.py).
+39. **DBSCAN Incident Intelligence Workstation:** DBSCAN clustering engine grouping correlated complaints into active incident clusters (`INC-042`). Displays cluster stats, complaint count, status, and cluster detail inspection.
+   - Streamlit Page: [10_Incident_Clusters.py](../app/frontend/pages/10_Incident_Clusters.py).
 
 ---
 

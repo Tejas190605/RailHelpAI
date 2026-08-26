@@ -12,6 +12,8 @@ An independent, production-inspired portfolio project that transforms raw railwa
 
 > ⚠️ **Disclaimer:** RailHelpAI is an independent portfolio project and is not affiliated with, endorsed by, or deployed by Indian Railways. Built using a 10,000 synthetic complaint dataset for demonstration purposes.
 
+![RailHelpAI Operations Command Center](docs/screenshots/01_command_center.png)
+
 ---
 
 ## 📌 Quick Navigation
@@ -151,8 +153,12 @@ Human operators can override category, priority, or department assignments. All 
 
 ## 📊 Empirical Results & Benchmarks
 
-### Automated Test Suite
-- **pytest Test Suite:** **106 / 106 PASSED (100% Success)** ([docs/TESTING.md](docs/TESTING.md))
+- **Automated Test Suite:** **106 / 106 PASSED (100% Success)** ([docs/TESTING.md](docs/TESTING.md))
+
+<details>
+<summary><strong>🔍 Click to expand Model Evaluation & Latency Benchmarks</strong></summary>
+
+<br/>
 
 ### Classifier Evaluation & Dataset Transparency
 RailHelpAI transparently documents both standard and zero-leakage evaluation metrics:
@@ -175,6 +181,8 @@ RailHelpAI transparently documents both standard and zero-leakage evaluation met
 - **Vision Classification:** 18.2 ms
 - **Multimodal Fusion:** 26.5 ms
 
+</details>
+
 ---
 
 ## 🎨 UI/UX Operations Workstations
@@ -192,20 +200,25 @@ RailHelpAI features a custom design system with Signal Red (`#C8102E`) accents, 
 
 ## 📸 Product Showcase Screenshots
 
-### 1. Operations Command Center
-![Command Center Dashboard showing operational KPIs, Grievance Category & Priority breakdown charts, and Operational Risk Index](docs/screenshots/01_command_center.png)
+### 01 — Operations Command Center
+Executive operational overview with KPIs, risk index, active incidents, and priority distribution.
+![Operations Command Center](docs/screenshots/01_command_center.png)
 
-### 2. AI Incident Assessment Report
-![AI Incident Assessment Engine showing predicted category, priority badge, department routing, and extracted entities](docs/screenshots/02_ai_analysis.png)
+### 02 — AI Incident Assessment
+Unified complaint intelligence with classification, entity extraction, sentiment, priority, and routing.
+![AI Incident Assessment](docs/screenshots/02_ai_analysis.png)
 
-### 3. Incident Investigation Console
-![Incident Investigation Console showing horizontal lifecycle timeline, grievance context, and resolution workstation](docs/screenshots/03_investigation_console.png)
+### 03 — Incident Investigation Console
+Complaint lifecycle investigation workspace with evidence, AI assessment, SLA state, and resolution workflow.
+![Incident Investigation Console](docs/screenshots/03_investigation_console.png)
 
-### 4. Incident Intelligence & DBSCAN Clusters
-![Incident Intelligence Workstation displaying active DBSCAN complaint clusters](docs/screenshots/04_incident_clusters.png)
+### 04 — Incident Intelligence & DBSCAN Clusters
+Incident intelligence showing related complaint clustering and emerging operational patterns.
+![Incident Intelligence & DBSCAN Clusters](docs/screenshots/04_incident_clusters.png)
 
-### 5. Executive Intelligence Dashboard
-![Executive Intelligence Dashboard showing Operational Risk Index, category trends, and metric-backed recommendations](docs/screenshots/05_executive_intelligence.png)
+### 05 — Executive Intelligence Dashboard
+Strategic analytics combining trends, operational risk, and prescriptive recommendations.
+![Executive Intelligence Dashboard](docs/screenshots/05_executive_intelligence.png)
 
 ---
 
@@ -237,6 +250,7 @@ RailHelpAI features a custom design system with Signal Red (`#C8102E`) accents, 
 
 ### 2. Execution Commands
 
+#### Windows (PowerShell)
 ```powershell
 # 1. Clone repository
 git clone https://github.com/Tejas190605/RailHelpAI.git
@@ -261,6 +275,33 @@ python scripts/seed_demo_data.py
 .\scripts\start_frontend.ps1
 ```
 
+> 💡 *Note:* `start_backend.ps1` and `start_frontend.ps1` are PowerShell scripts designed for Windows execution.
+
+#### macOS / Linux (Bash)
+```bash
+# 1. Clone repository
+git clone https://github.com/Tejas190605/RailHelpAI.git
+cd RailHelpAI
+
+# 2. Virtual environment setup
+python3 -m venv venv
+source venv/bin/activate
+pip install -r requirements.txt
+
+# 3. Environment file
+cp .env.example .env
+
+# 4. Initialize database & seed demo scenarios
+python3 app/database/init_db.py
+python3 scripts/seed_demo_data.py
+
+# 5. Start Backend Server (Terminal 1)
+python3 -m uvicorn app.backend.main:app --reload --port 8000
+
+# 6. Start Frontend Web UI (Terminal 2)
+python3 -m streamlit run app/frontend/app.py --server.port 8501
+```
+
 Access Web App at **`http://127.0.0.1:8501`** and Swagger API docs at **`http://127.0.0.1:8000/docs`**.
 
 ---
@@ -282,17 +323,36 @@ Access Web App at **`http://127.0.0.1:8501`** and Swagger API docs at **`http://
 
 ## 📚 Documentation Index
 
-- [`docs/SETUP.md`](docs/SETUP.md) — Detailed setup instructions
-- [`docs/ARCHITECTURE.md`](docs/ARCHITECTURE.md) — Complete architecture specification
-- [`docs/TESTING.md`](docs/TESTING.md) — Automated test suite report
-- [`docs/API_TESTING.md`](docs/API_TESTING.md) — REST API testing & validation specification
+### Core Architecture & Setup
+- [`docs/SETUP.md`](docs/SETUP.md) — Detailed setup & environment configuration
+- [`docs/ARCHITECTURE.md`](docs/ARCHITECTURE.md) — Complete system architecture specification
+- [`docs/DESIGN_SYSTEM.md`](docs/DESIGN_SYSTEM.md) — Custom design system & UI tokens
+
+### AI / ML & Benchmarks
+- [`docs/AI_PIPELINE.md`](docs/AI_PIPELINE.md) — AI/ML pipeline architecture & model design
+- [`docs/MODEL_CARD.md`](docs/MODEL_CARD.md) — Transparent ML model card & evaluation metrics
+- [`docs/LIMITATIONS.md`](docs/LIMITATIONS.md) — Model limitations & synthetic template leakage report
+- [`docs/CLUSTERING.md`](docs/CLUSTERING.md) — DBSCAN spatial/temporal incident clustering specification
+- [`docs/DUPLICATE_DETECTION.md`](docs/DUPLICATE_DETECTION.md) — Cosine similarity vector duplicate suppression
+- [`docs/MULTIMODAL_INTELLIGENCE.md`](docs/MULTIMODAL_INTELLIGENCE.md) — Local vision defect classifier & OCR fusion
+- [`docs/OCR.md`](docs/OCR.md) — Local ticket/label OCR text extraction specification
+- [`docs/RESOLUTION_PREDICTION.md`](docs/RESOLUTION_PREDICTION.md) — RandomForest resolution-time regressor
+- [`docs/TEMPORAL_INTELLIGENCE.md`](docs/TEMPORAL_INTELLIGENCE.md) — SLA target deadline & escalation calculation engine
+- [`docs/HOTSPOT_INTELLIGENCE.md`](docs/HOTSPOT_INTELLIGENCE.md) — Train & station health analytical risk profilers
+- [`docs/RECOMMENDATION_ENGINE.md`](docs/RECOMMENDATION_ENGINE.md) — Prescriptive action recommendation rules
+
+### Testing & Quality Assurance
+- [`docs/TESTING.md`](docs/TESTING.md) — Master automated test suite report (106/106 passing)
+- [`docs/API_TESTING.md`](docs/API_TESTING.md) — FastAPI REST API contract tests & specification
 - [`docs/AI_PIPELINE_TESTING.md`](docs/AI_PIPELINE_TESTING.md) — AI/ML pipeline contract tests
-- [`docs/STREAMLIT_TESTING.md`](docs/STREAMLIT_TESTING.md) — Streamlit native AppTest testing guide
-- [`docs/CI.md`](docs/CI.md) — GitHub Actions CI/CD specification
-- [`docs/FINAL_RELEASE_VERIFICATION.md`](docs/FINAL_RELEASE_VERIFICATION.md) — Final release verification matrix
-- [`docs/SECURITY.md`](docs/SECURITY.md) — Security controls & guidelines
-- [`docs/LIMITATIONS.md`](docs/LIMITATIONS.md) — Transparent model limitations
-- [`docs/SECURITY_AUDIT.md`](docs/SECURITY_AUDIT.md) — Security scan findings
-- [`docs/PORTFOLIO_PROJECT_SUMMARY.md`](docs/PORTFOLIO_PROJECT_SUMMARY.md) — Portfolio project summary & tech stack
-- [`docs/SCREENSHOT_GUIDE.md`](docs/SCREENSHOT_GUIDE.md) — Screenshot capture guidelines & status
-- [`docs/FINAL_PROJECT_WALKTHROUGH.md`](docs/FINAL_PROJECT_WALKTHROUGH.md) — Complete walkthrough
+- [`docs/STREAMLIT_TESTING.md`](docs/STREAMLIT_TESTING.md) — Streamlit native AppTest UI test suite guide
+- [`docs/CI.md`](docs/CI.md) — GitHub Actions CI/CD workflow specification
+- [`docs/SECURITY_AUDIT.md`](docs/SECURITY_AUDIT.md) — Security scan findings & audit report
+
+### Operations & Release
+- [`docs/OPERATIONS.md`](docs/OPERATIONS.md) — Operational workflows & state machine lifecycle
+- [`docs/SECURITY.md`](docs/SECURITY.md) — Security controls & request correlation guidelines
+- [`docs/FINAL_PROJECT_WALKTHROUGH.md`](docs/FINAL_PROJECT_WALKTHROUGH.md) — End-to-end project walkthrough
+- [`docs/FINAL_RELEASE_VERIFICATION.md`](docs/FINAL_RELEASE_VERIFICATION.md) — Final release verification matrix (v1.0.0)
+- [`docs/PORTFOLIO_PROJECT_SUMMARY.md`](docs/PORTFOLIO_PROJECT_SUMMARY.md) — Portfolio project summary & tech stack matrix
+- [`docs/SCREENSHOT_GUIDE.md`](docs/SCREENSHOT_GUIDE.md) — Screenshot capture guidelines & social preview setup

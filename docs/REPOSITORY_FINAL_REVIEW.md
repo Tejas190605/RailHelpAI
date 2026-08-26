@@ -21,7 +21,7 @@ RailHelpAI has been audited, documented, and hardened for GitHub portfolio prese
 | :--- | :--- | :---: | :--- |
 | **README Quality** | Hero badges, Mermaid flowchart, architecture, results, human-in-the-loop, 5-min demo | ✅ **PASS** | High-quality GitHub portfolio [`README.md`](../README.md). |
 | **Documentation Suite**| 37 markdown documents in `docs/` with 100% working links | ✅ **PASS** | All cross-links verified; zero broken links. |
-| **Automated Tests** | `python -m pytest tests/ -v` | ✅ **PASS** | **85 / 85 PASSED (100% Success in 9.63s)**. |
+| **Automated Tests** | `python -m pytest tests/ -v` | ✅ **PASS** | **106 / 106 PASSED (100% Success)**. |
 | **Security Scan** | Secrets, API keys, tokens, absolute Windows paths | ✅ **PASS** | 0 secrets or absolute paths committed; `.env` & `railhelpai.db` in `.gitignore`. |
 | **Setup & Reproducibility**| `init_db.py` & `seed_demo_data.py` clean setup | ✅ **PASS** | Initialized SQLite schema & seeded 5 demo scenarios. |
 | **Portfolio Positioning**| Resume bullets, technical stack, key engineering decisions | ✅ **PASS** | [`docs/PORTFOLIO_PROJECT_SUMMARY.md`](PORTFOLIO_PROJECT_SUMMARY.md). |

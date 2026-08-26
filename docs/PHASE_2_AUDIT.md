@@ -95,7 +95,7 @@ The Phase 2 AI Core Engine is fully functional, deterministic, explainable, and 
 ---
 
 ## 9. Department Routing Audit
-- **Centralized Location:** [app/ai/router.py](file:///c:/Users/tejas/RailHelpAI/app/ai/router.py).
+- **Centralized Location:** [app/ai/router.py](../app/ai/router.py).
 - **Verification:** Correctly maps 14 categories and applies security (RPF) and medical emergency overrides.
 
 ---

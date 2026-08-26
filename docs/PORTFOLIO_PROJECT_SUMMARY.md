@@ -11,7 +11,7 @@
 RailHelpAI is an independent, production-inspired portfolio project that transforms raw railway passenger grievances into structured, actionable operational intelligence using NLP, machine learning, multimodal evidence analysis, workflow automation, and human-in-the-loop review.
 
 ### One-line Resume Description
-- **RailHelpAI:** Production-inspired railway complaint intelligence platform using FastAPI, Streamlit, scikit-learn, and SQLite with automated NLP classification, SLA workflows, DBSCAN incident clustering, and multimodal vision fusion (85/85 automated tests passing).
+- **RailHelpAI:** Production-inspired railway complaint intelligence platform using FastAPI, Streamlit, scikit-learn, and SQLite with automated NLP classification, SLA workflows, DBSCAN incident clustering, and multimodal vision fusion (106/106 automated tests passing).
 
 ---
 
@@ -22,7 +22,7 @@ RailHelpAI is an independent, production-inspired portfolio project that transfo
   - Engineered an end-to-end railway complaint triage system using **FastAPI**, **Streamlit**, **scikit-learn**, and **SQLite**, processing raw text/image grievances into prioritized operational tickets.
   - Implemented an **AI NLP pipeline** incorporating TF-IDF classification, entity extraction (NER), priority scoring (P1–P4), rule-based sentiment analysis, and automated department routing with confidence-based human-in-the-loop thresholds ($\ge 85\%$ auto, $60-84\%$ human review).
   - Developed advanced intelligence services including **cosine vector duplicate detection**, **DBSCAN incident clustering**, **RandomForest resolution-time prediction** (MAE: 8.04 min, $R^2$: 0.9353), and a multimodal vision/OCR fusion engine with cross-modal conflict detection.
-  - Hardened backend API with `X-Request-ID` correlation middleware, health liveness/readiness checks, structured error handling, and SQLite indexing; verified **85/85 automated tests passing**.
+  - Hardened backend API with `X-Request-ID` correlation middleware, health liveness/readiness checks, structured error handling, and SQLite indexing; verified **106/106 automated tests passing**.
 
 #### Version B: Deep Technical Bullets
 - **RailHelpAI — Multimodal Railway Operations & Grievance Intelligence System**
@@ -32,7 +32,7 @@ RailHelpAI is an independent, production-inspired portfolio project that transfo
   - Conducted transparent ML model evaluation, documenting synthetic template leakage (94.90% random split vs 30.50% zero-leakage template-grouped evaluation).
 
 #### Version C: Concise Resume Entry
-- **RailHelpAI:** End-to-end railway complaint intelligence platform using FastAPI, Streamlit, scikit-learn, and SQLite with automated NLP classification, SLA workflows, DBSCAN incident clustering, and multimodal vision fusion (85/85 automated tests passing).
+- **RailHelpAI:** End-to-end railway complaint intelligence platform using FastAPI, Streamlit, scikit-learn, and SQLite with automated NLP classification, SLA workflows, DBSCAN incident clustering, and multimodal vision fusion (106/106 automated tests passing).
 
 ---
 
@@ -94,3 +94,16 @@ FastAPI Backend (Port 8000 / OpenAPI)
 - **Template-Grouped Split Metric:** 30.50% Accuracy (Conservative estimate of real-world generalization).
 - **Resolution Predictor:** MAE = 8.04 min, RMSE = 10.22 min, $R^2$ = 0.9353.
 - **Transparency Statement:** Both metrics are preserved and documented to demonstrate honest machine learning evaluation practices.
+
+---
+
+## 📌 Recommended GitHub Repository Metadata
+
+- **Description:**
+  `AI-Powered Railway Complaint Intelligence & Operations Platform built with FastAPI, Streamlit, scikit-learn, and SQLite.`
+
+- **Recommended Topics:**
+  `fastapi` `streamlit` `scikit-learn` `python` `nlp` `machine-learning` `sqlite` `incident-management` `multimodal-ai` `operations-dashboard`
+
+- **Primary Social Preview Image:**
+  [`docs/screenshots/01_command_center.png`](screenshots/01_command_center.png)
